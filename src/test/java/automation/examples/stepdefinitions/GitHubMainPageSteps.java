@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
 @ContextConfiguration(classes = ApplicationConfig.class)
-public class GitHubSteps {
+public class GitHubMainPageSteps {
 
   @Autowired
   private GitHubPage gitHubPage;

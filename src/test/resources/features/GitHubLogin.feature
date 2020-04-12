@@ -6,4 +6,3 @@ Feature: GitHub login test
     When open login form
     And login to GitHub
     Then check Repository Page is opened
-    And Logout from GitHub

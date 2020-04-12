@@ -8,5 +8,86 @@
   <artifactId>gitHubTests</artifactId>
   <version>1.0-SNAPSHOT</version>
 
+  <properties>
+    <cucumber.version>4.2.6</cucumber.version>
+    <selenium-java.version>3.141.59</selenium-java.version>
+    <awaitility.version>3.0.0</awaitility.version>
+    <webdrivermanager.version>3.8.1</webdrivermanager.version>
+  </properties>
+
+  <profiles>
+    <profile>
+      <id>firefox</id>
+<!--      <activation>-->
+<!--        <activeByDefault>true</activeByDefault>-->
+<!--      </activation>-->
+      <properties>
+        <spring.profiles.active>firefox</spring.profiles.active>
+      </properties>
+    </profile>
+    <profile>
+      <id>chrome</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <properties>
+        <spring.profiles.active>chrome</spring.profiles.active>
+      </properties>
+    </profile>
+  </profiles>
+
+  <dependencies>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-core</artifactId>
+      <version>${cucumber.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-junit</artifactId>
+      <version>${cucumber.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-java</artifactId>
+      <version>${cucumber.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>io.cucumber</groupId>
+      <artifactId>cucumber-spring</artifactId>
+      <version>${cucumber.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-context</artifactId>
+      <version>5.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-tx</artifactId>
+      <version>5.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-test</artifactId>
+      <version>5.2.5.RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>${selenium-java.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.github.bonigarcia</groupId>
+      <artifactId>webdrivermanager</artifactId>
+      <version>${webdrivermanager.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.awaitility</groupId>
+      <artifactId>awaitility</artifactId>
+      <version>${awaitility.version}</version>
+    </dependency>
+  </dependencies>
 
 </project>
