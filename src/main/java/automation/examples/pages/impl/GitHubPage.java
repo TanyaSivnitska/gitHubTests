@@ -3,7 +3,6 @@ package automation.examples.pages.impl;
 import automation.examples.pages.AbstractLoadable;
 import automation.examples.pages.Page;
 import automation.examples.pages.impl.components.LoginForm;
-import cucumber.api.java.bs.A;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -41,6 +40,5 @@ public class GitHubPage extends AbstractLoadable implements Page {
 
   public void waitUntilLoaded() {
     getDriverWait().until(ExpectedConditions.visibilityOf(signInLink));
-//    getDriverWait().until(ExpectedConditions.visibilityOf(signUpLink));
   }
 }
