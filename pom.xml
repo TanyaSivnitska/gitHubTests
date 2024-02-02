@@ -13,7 +13,7 @@
     <selenium-java.version>3.141.59</selenium-java.version>
     <awaitility.version>3.0.0</awaitility.version>
     <webdrivermanager.version>3.8.1</webdrivermanager.version>
-    <spring.version>5.2.5.RELEASE</spring.version>
+    <spring.version>5.2.22.RELEASE</spring.version>
   </properties>
 
   <profiles>
